@@ -1,0 +1,61 @@
+/*
+Stylesheet for Doesitfit
+Created by Nicolas Drufin
+Copyright 2015
+*/
+
+html, body {
+	margin: 0;
+	height: 100%;
+}
+
+header#header  {
+	background-color: #ffffff;
+	background-image: url(../img/gplay.png);
+	text-align: center;
+	color: #444444;
+	font-family: Verdana, sans-serif;
+	height: 20%;
+	width: 100%;
+	display:table;
+	border-bottom: 1px solid #c0c0c0;
+}
+header#header h1  {
+	margin:auto;
+	display:table-cell;
+	vertical-align: middle;
+}
+
+section  {
+	margin: 5%;
+}
+
+section#searchapp {
+	margin-left: auto;
+	margin-right: auto;
+	width: 30%;
+}
+
+section#searchapp label {
+	width:16%;
+	display: inline-block;
+	text-align: right;
+}
+
+section#searchapp select {
+	width: 16%;
+	height: 45px;
+}
+
+section#searchapp input[type="text"] {
+	width: 100%;
+	padding:2%;
+	margin-top: 1%;
+}
+
+footer#footer {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	font-size: 0.8em;
+}

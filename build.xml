@@ -26,7 +26,7 @@
 		<sshexec command="if [ -d ${deploy.dir} ]; then rm -rf ${deploy.dir}; fi;" host="${server.host}" username="${server.user}" password="${server.pwd}" trust="yes"/>
 	</target>
 	
-	<target name="Reload static content" depends="Remove all, Deploy">
+	<target name="Reload static content" depends="Deploy">
 		<sshexec command="python ${deploy.dir}/manage.py collectstatic --noinput" host="${server.host}" username="${server.user}" password="${server.pwd}" trust="yes"/>
 	</target>
 </project>
