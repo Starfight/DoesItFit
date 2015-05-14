@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+admin.autodiscover()
+
+from DoesItFit.search.views import SearchView
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^$', SearchView.as_view(), name='search'),
 ]
