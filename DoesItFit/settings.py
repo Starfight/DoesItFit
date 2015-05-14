@@ -69,7 +69,9 @@ ROOT_URLCONF = 'DoesItFit.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(ABSOLUTE_PATH, 'search'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
