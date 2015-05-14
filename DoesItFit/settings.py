@@ -29,6 +29,15 @@ ADMINS = (
     ('Nicolas Drufin', 'starfightbymagikhaos@msn.com'),
 )
 
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/1.8/howto/static-files/
+STATIC_ROOT = os.path.join(ABSOLUTE_PATH, 'collected_static')
+STATIC_URL = '/static/'
+
+# Media url for users
+MEDIA_ROOT = os.path.join(ABSOLUTE_PATH, 'medias')
+MEDIA_URL = '/medias/'
+
 ALLOWED_HOSTS = []
 
 
@@ -41,6 +50,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'DoesItFit.search',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -103,15 +113,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.8/howto/static-files/
-
-STATIC_URL = '/static/'
-
-# Media url for users
-MEDIA_ROOT = os.path.join(ABSOLUTE_PATH, 'medias')
-MEDIA_URL = '/medias/'
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
