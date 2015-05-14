@@ -14,13 +14,19 @@
 			<fileset dir=".">
 				<include name="DoesItFit/*"/>
 				<include name="**/*.py"/>
+				<include name="**/*.html"/>
+				<include name="**/*.css"/>
+				<include name="**/*.png"/>
 			</fileset>
 		</scp>
 		<echo message="Deploy on serveur with success" />
 	</target>
 	
-	<target name="Delete and Deploy">
+	<target name="Remove all">
 		<sshexec command="if [ -d ${deploy.dir} ]; then rm -rf ${deploy.dir}; fi;" host="${server.host}" username="${server.user}" password="${server.pwd}" trust="yes"/>
-		<antcall target="Deploy" />
+	</target>
+	
+	<target name="Reload static content" depends="Remove all, Deploy">
+		<sshexec command="python ${deploy.dir}/manage.py collectstatic --noinput" host="${server.host}" username="${server.user}" password="${server.pwd}" trust="yes"/>
 	</target>
 </project>
