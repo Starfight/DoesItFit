@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="DoesItFit_site" default="Deploy" basedir=".">
+	<!-- Directories -->
+	<property name="deploy.dir" value="/opt/DoesItFit"/>
+	<!-- Server settings -->
+	<property name="server.host" value="katana"/>
+	<property name="server.user" value="root"/>
+	<property name="server.pwd" value="password"/>
+	
+	<target name="Deploy">
+		<echo message="Start deploy on server" />
+		<sshexec command="if [ -d ${deploy.dir} ]; then rm -rf ${deploy.dir}; fi; mkdir -p ${deploy.dir}" host="${server.host}" username="${server.user}" password="${server.pwd}" trust="yes"/>
+		<scp todir="${server.user}:${server.pwd}@${server.host}:${deploy.dir}" trust="yes">
+			<fileset dir=".">
+				<include name="DoesItFit/*"/>
+				<include name="**/*.py"/>
+			</fileset>
+		</scp>
+		<echo message="Deploy on serveur with success" />
+	</target>
+</project>
