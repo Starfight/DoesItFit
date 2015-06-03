@@ -3,7 +3,9 @@
 <html>
 <head>
         <meta charset="utf-8">
-        <title>{% trans 'Todo list' %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>{% trans 'Does it fit?' %}</title>
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
@@ -12,15 +14,24 @@
                 <h1>{% trans 'Does it fit?' %}</h1>
         </header>
                 
-        <section id="searchapp">
-        		<label for="search-lenght">{% trans 'Lenght:' %}</label>
-                <select id="search-lenght"></select>
-                <label for="search-width">{% trans 'Width:' %}</label>
-                <select id="search-width"></select>
-                <label for="search-height">{% trans 'Height:' %}</label>
-                <select id="search-height"></select>
-                <br/>
-                <input type="text" id="search-subject" placeholder="{% trans 'What do you want to search?' %}" autofocus>	
+        <section id="searchapp" class="container-fluid">
+        	<div class="row">
+        		<div class="form-group">
+        			<label for="search-lenght">{% trans 'Lenght:' %}</label>
+                	<select id="search-lenght" class="form-control"></select>
+                </div>
+                <div class="form-group">
+                	<label for="search-width">{% trans 'Width:' %}</label>
+                	<select id="search-width" class="form-control"></select>
+                </div>
+                <div class="form-group">
+                	<label for="search-height">{% trans 'Height:' %}</label>
+                	<select id="search-height" class="form-control"></select>
+                </div>
+            </div>
+            <div class="row">
+                <input type="text" id="search-subject" class="form-control" placeholder="{% trans 'What do you want to search?' %}" autofocus>	
+            </div>
         </section>
 
         <footer id="footer">
