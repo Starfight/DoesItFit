@@ -4,4 +4,4 @@ from django.views.generic import TemplateView
 
 class SearchView(TemplateView):
 
-    template_name="search_main.html"
+    template_name="search/search_main.html"
