@@ -60,6 +60,7 @@ target/
 # Eclipse project
 .project
 .pydevproject
+.settings/
 
 # Picasa file
 Thumbs.db

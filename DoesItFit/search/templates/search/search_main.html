@@ -10,32 +10,50 @@
 </head>
 
 <body>
-		<header id="header">
+        <header id="header">
                 <h1>{% trans 'Does it fit?' %}</h1>
+				<img src="{% static 'img/kittens-in-boxes.jpg' %}" alt="box" />
         </header>
                 
         <section id="searchapp" class="container-fluid">
-        	<div class="row">
-        		<div class="form-group">
-        			<label for="search-lenght">{% trans 'Lenght:' %}</label>
-                	<select id="search-lenght" class="form-control"></select>
+            <div class="row">
+                <div class="col-sm-4 dim-fields">
+                    <label for="search-lenght">{% trans 'Lenght:' %}</label>
+                    <select id="search-lenght" class="form-control">
+                        <option value="None">{% trans 'Indifferent' %}</option>
+                        {% for dim in dim_range %}
+                            <option value="{{ dim }}">{{ dim }} cm</option>
+                        {% endfor %}
+                    </select>
                 </div>
-                <div class="form-group">
-                	<label for="search-width">{% trans 'Width:' %}</label>
-                	<select id="search-width" class="form-control"></select>
+                <div class="col-sm-4 dim-fields">
+                    <label for="search-width">{% trans 'Width:' %}</label>
+                    <select id="search-width" class="form-control">
+                        <option value="None">{% trans 'Indifferent' %}</option>
+                        {% for dim in dim_range %}
+                            <option value="{{ dim }}">{{ dim }} cm</option>
+                        {% endfor %}
+                    </select>
                 </div>
-                <div class="form-group">
-                	<label for="search-height">{% trans 'Height:' %}</label>
-                	<select id="search-height" class="form-control"></select>
+                <div class="col-sm-4 dim-fields">
+                    <label for="search-height">{% trans 'Height:' %}</label>
+                    <select id="search-height" class="form-control">
+                        <option value="None">{% trans 'Indifferent' %}</option>
+						{% for dim in dim_range %}
+                            <option value="{{ dim }}">{{ dim }} cm</option>
+                        {% endfor %}
+                    </select>
                 </div>
             </div>
             <div class="row">
-                <input type="text" id="search-subject" class="form-control" placeholder="{% trans 'What do you want to search?' %}" autofocus>	
+				<div class="col-xs-12">
+					<input type="text" id="search-subject" class="form-control" placeholder="{% trans 'What do you want to search?' %}" autofocus>
+				</div>			
             </div>
         </section>
 
         <footer id="footer">
-			<span id="copyright">{% trans 'Copyright Nicolas Drufin' %}</span>   
+            <span id="copyright">{% trans 'Copyright Nicolas Drufin' %}</span>   
         </footer>
 
 </body>
