@@ -50,7 +50,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'doesitfit.search',
+    'DoesItFit.search',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -64,7 +64,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.security.SecurityMiddleware',
 )
 
-ROOT_URLCONF = 'doesitfit.urls'
+ROOT_URLCONF = 'DoesItFit.urls'
 
 TEMPLATES = [
     {
@@ -84,7 +84,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'doesitfit.wsgi.application'
+WSGI_APPLICATION = 'DoesItFit.wsgi.application'
 
 
 # Database
@@ -94,8 +94,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', 
         'NAME': 'doesitfit',                      
-        'USER': 'adminUenkrkU',                   
-        'PASSWORD': '5rQ_-dJFMZEd',               
+        'USER': 'root',                   
+        'PASSWORD': '',               
         'HOST': 'localhost',                      
         'PORT': '3306',                     
     }
