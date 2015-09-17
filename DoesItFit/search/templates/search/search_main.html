@@ -16,6 +16,8 @@
         </header>
                 
         <section id="searchapp" class="container-fluid">
+            <form method="POST" action="{% url 'results' %}">
+                 {% csrf_token %} 
             <div class="row">
                 <div class="col-sm-4 dim-fields">
                     <label for="search-lenght">{% trans 'Lenght:' %}</label>
@@ -50,6 +52,12 @@
 					<input type="text" id="search-subject" class="form-control" placeholder="{% trans 'What do you want to search?' %}" autofocus>
 				</div>			
             </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <input type="submit" id="search" class="form-control" value="Does it fit?">
+                </div>          
+            </div>
+        </form>
         </section>
 
         <footer id="footer">

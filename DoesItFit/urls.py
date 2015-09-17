@@ -17,9 +17,10 @@ from django.conf.urls import include, url
 from django.contrib import admin
 admin.autodiscover()
 
-from DoesItFit.search.views import SearchView
+from DoesItFit.search.views import SearchView, ResultsView
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', SearchView.as_view(), name='search'),
+    url(r'^results/.*', ResultsView.as_view(), name='results')
 ]

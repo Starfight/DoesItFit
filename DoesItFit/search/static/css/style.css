@@ -49,17 +49,33 @@ section#searchapp label {
 }
 
 section#searchapp select.form-control {
-	width: 120px;
+	min-width: 120px;
 	height: 45px;
 	display: inline;	
 }
 
-section#searchapp .dim-fields {
-	margin-bottom: 3px;
+section#searchapp .row {
+	margin-bottom: 5px;
 }
 
 section#searchapp input[type="text"] {
 	height: 43px;
+}
+
+section#searchapp input[type="submit"] {
+	margin: auto;
+	max-width: 250px;
+	color: white;
+	font-weight: bold;
+	background-color: rgba(52, 157, 170, 0.6);
+}
+
+section#searchapp input[type="submit"]:hover {
+	background-color: rgba(52, 157, 170, 0.7);
+}
+
+section#searchapp input[type="submit"]:active {
+	background-color: rgba(52, 157, 170, 0.5);
 }
 
 footer#footer {
