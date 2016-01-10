@@ -64,3 +64,6 @@ target/
 
 # Picasa file
 Thumbs.db
+
+# Personnal use
+start_server.bat
