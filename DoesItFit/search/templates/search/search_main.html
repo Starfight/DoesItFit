@@ -16,48 +16,32 @@
         </header>
                 
         <section id="searchapp" class="container-fluid">
-            <form method="POST" action="{% url 'results' %}">
-                 {% csrf_token %} 
-            <div class="row">
-                <div class="col-sm-4 dim-fields">
-                    <label for="search-lenght">{% trans 'Lenght:' %}</label>
-                    <select id="search-lenght" class="form-control">
-                        <option value="None">{% trans 'Indifferent' %}</option>
-                        {% for dim in dim_range %}
-                            <option value="{{ dim }}">{{ dim }} cm</option>
-                        {% endfor %}
-                    </select>
-                </div>
-                <div class="col-sm-4 dim-fields">
-                    <label for="search-width">{% trans 'Width:' %}</label>
-                    <select id="search-width" class="form-control">
-                        <option value="None">{% trans 'Indifferent' %}</option>
-                        {% for dim in dim_range %}
-                            <option value="{{ dim }}">{{ dim }} cm</option>
-                        {% endfor %}
-                    </select>
-                </div>
-                <div class="col-sm-4 dim-fields">
-                    <label for="search-height">{% trans 'Height:' %}</label>
-                    <select id="search-height" class="form-control">
-                        <option value="None">{% trans 'Indifferent' %}</option>
-						{% for dim in dim_range %}
-                            <option value="{{ dim }}">{{ dim }} cm</option>
-                        {% endfor %}
-                    </select>
-                </div>
-            </div>
-            <div class="row">
-				<div class="col-xs-12">
-					<input type="text" id="search-subject" class="form-control" placeholder="{% trans 'What do you want to search?' %}" autofocus>
-				</div>			
-            </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <input type="submit" id="search" class="form-control" value="Does it fit?">
-                </div>          
-            </div>
-        </form>
+            <form method="GET" action="{% url 'results' %}">
+				<div class="row">
+					<div class="col-sm-4 dim-fields">
+						<label for="{{ form.search_lenght.id_for_label }}">{% trans 'Lenght:' %}</label>
+						{{ form.search_lenght }}
+					</div>
+					<div class="col-sm-4 dim-fields">
+						<label for="{{ form.search_width.id_for_label }}">{% trans 'Width:' %}</label>
+						{{ form.search_width }}
+					</div>
+					<div class="col-sm-4 dim-fields">
+						<label for="{{ form.search_height.id_for_label }}">{% trans 'Height:' %}</label>
+						{{ form.search_height }}
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						{{ form.search_subject }}
+					</div>			
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<input type="submit" id="search" class="form-control" value="Does it fit?">
+					</div>          
+				</div>
+			</form>
         </section>
 
         <footer id="footer">

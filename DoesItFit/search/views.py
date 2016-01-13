@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render
 from django.views.generic import TemplateView
+from DoesItFit.search.forms import SearchForm
 
 class SearchView(TemplateView):
     """
@@ -14,7 +15,7 @@ class SearchView(TemplateView):
         Envoi les infos contextuelles au gabarit
         """
         context = super(SearchView, self).get_context_data(**kwargs)
-        context['dim_range'] = list(range(10, 150))
+        context['form'] = SearchForm()
         return context
 
 class ResultsView(TemplateView):
