@@ -1,3 +1,4 @@
+#encoding: utf-8
 from django.db import models
 
 # Create your models here.
@@ -24,6 +25,13 @@ class Article(models.Model):
         Affichage de l'article
         """
         return self.name
+
+    def get_str_dimensions(self):
+        """
+        Affichage des dimensions proprement
+        :return:
+        """
+        return "{0} x {1} x {2}".format(self.width, self.lenght, self.height)
     
     
 class VendorWebsite(models.Model):

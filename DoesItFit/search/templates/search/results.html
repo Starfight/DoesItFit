@@ -14,8 +14,10 @@
                 <h1>{% trans 'Does it fit?' %}</h1>
 				<img src="{% static 'img/kittens-in-boxes.jpg' %}" alt="box" />
         </header>
-                
-        TO DO
+
+        {% for article in articles_list %}
+                {% include 'search/result_item.html' with article=article %}
+        {% endfor %}
 
         <footer id="footer">
             <span id="copyright">{% trans 'Copyright Nicolas Drufin' %}</span>   

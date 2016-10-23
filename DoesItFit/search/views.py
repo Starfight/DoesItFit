@@ -3,6 +3,8 @@ from django.shortcuts import render
 from django.views.generic import TemplateView
 from DoesItFit.search.forms import SearchForm
 from django.http import HttpResponseRedirect
+from DoesItFit.search.models import Article
+
 
 class SearchView(TemplateView):
     """
@@ -59,4 +61,5 @@ class ResultsView(TemplateView):
         Envoi les infos contextuelles au gabarit
         """
         context = super(ResultsView, self).get_context_data(**kwargs)
+        context["articles_list"] = Article.objects.all()
         return context
