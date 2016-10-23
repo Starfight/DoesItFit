@@ -1,0 +1,14 @@
+{% load i18n staticfiles %}
+<article class="resultitem">
+    <div class="imgitem">
+        <img src="{{ article.img_url }}" alt="{{ article.name }}"/>
+        <a href="{{ article.url }}" class="link">{% trans 'Buy it'|upper %}</a>
+    </div>
+    <h3>{{ article.name }}</h3>
+    <ul>
+        <li>{% trans 'Reference:' %} {{ article.ref }}</li>
+        <li>{% trans 'Dimensions:' %} {{ article.get_str_dimensions }} ({% trans 'width x length x height' %})</li>
+        <li>{% trans 'Color:' %} {{ article.color }}</li>
+        <li>{% trans 'Vendor:' %} {{ article.vendor }}</li>
+    </ul>
+</article>

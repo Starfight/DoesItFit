@@ -84,3 +84,59 @@ footer#footer {
 	right: 0;
 	font-size: 0.8em;
 }
+
+article.resultitem {
+    border: 1px solid #dadada;
+    background: white;
+    padding: 1%;
+    margin: 1%;
+    overflow: auto;
+}
+
+article .imgitem {
+    border: 1px solid #dadada;
+    float: left;
+    margin-right: 10px;
+    display: block;
+    position: relative;
+}
+
+article img {
+    width: 128px;
+    height: 128px;
+}
+
+article h3 {
+    margin-top: 0px;
+}
+
+article ul {
+    overflow: hidden;
+}
+
+article .link {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: block;
+    width: 108px;
+    height: 25px;
+    border: 2px solid #333;
+    background: transparent;
+    text-decoration: none;
+    text-align: center;
+    color: #333;
+}
+
+article .link:hover {
+    text-decoration: none;
+    color: rgba(52, 157, 170, 0.7);
+    border: 2px solid rgba(52, 157, 170, 0.7);
+}
+
+article .link:hover {
+    text-decoration: none;
+    color: rgba(52, 157, 170, 0.5);
+    border: 2px solid rgba(52, 157, 170, 0.5);
+}
+
