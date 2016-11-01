@@ -10,10 +10,7 @@
 </head>
 
 <body>
-        <header id="header">
-                <h1>{% trans 'Does it fit?' %}</h1>
-				<img src="{% static 'img/kittens-in-boxes.jpg' %}" alt="box" />
-        </header>
+        {% include 'search/header.html' %}
                 
         <section id="searchapp" class="container-fluid">
             <form method="GET" action="{% url 'results' %}">

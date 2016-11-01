@@ -34,6 +34,11 @@ header#header img {
 	min-width: 50px;
 }
 
+header#header a {
+    text-decoration: none;
+    color: inherit;
+}
+
 section  {
 	margin: 5%;
 }
