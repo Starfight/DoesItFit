@@ -114,29 +114,29 @@ article ul {
     overflow: hidden;
 }
 
-article .link {
+article .buy-button {
     position: absolute;
     bottom: 10px;
     right: 10px;
     display: block;
     width: 108px;
     height: 25px;
-    border: 2px solid #333;
-    background: transparent;
+    box-shadow: 0px 0px 5px #333;
+    background-color: rgba(52, 157, 170, 1);
     text-decoration: none;
     text-align: center;
-    color: #333;
+    color: white;
+    padding: 2px;
 }
 
-article .link:hover {
+article .buy-button:hover {
     text-decoration: none;
-    color: rgba(52, 157, 170, 0.7);
-    border: 2px solid rgba(52, 157, 170, 0.7);
+    background-color: rgba(52, 157, 170, 0.7);
+    border: rgba(52, 157, 170, 0.7);
 }
 
-article .link:hover {
+article .buy-button:active {
     text-decoration: none;
-    color: rgba(52, 157, 170, 0.5);
-    border: 2px solid rgba(52, 157, 170, 0.5);
+    background-color: rgba(52, 157, 170, 0.5);
 }
 
