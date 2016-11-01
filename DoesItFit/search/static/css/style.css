@@ -145,3 +145,8 @@ article .buy-button:active {
     background-color: rgba(52, 157, 170, 0.5);
 }
 
+article .price {
+    float: right;
+    font-size: 2.5em;
+    padding: 0px 15px;
+}

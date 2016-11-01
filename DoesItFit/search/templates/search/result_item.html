@@ -4,6 +4,7 @@
         <img src="{{ article.img_url }}" alt="{{ article.name }}"/>
         <a href="{{ article.url }}" class="buy-button">{% trans 'Buy it'|upper %}</a>
     </div>
+    <span class="price">{{ article.price|stringformat:"g" }}€</span>
     <h3>{{ article.name }}</h3>
     <ul>
         <li>{% trans 'Reference:' %} {{ article.ref }}</li>
